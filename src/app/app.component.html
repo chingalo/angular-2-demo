@@ -1,6 +1,9 @@
-<h1>
+<ng2-dhis-menu [dhis2_url]="application_url"></ng2-dhis-menu>
+<h1 class="text-center text-primary">
   {{title}}
 </h1>
+<!--<h4>Selected OU is : {{ orgunit.name }} and has {{ orgunit.children.length }} children</h4>-->
+<ng2-dhis-org-unit-tree [tree_config]="tree_config" (selected)="onSelected($event)"></ng2-dhis-org-unit-tree>
 
 <a  [routerLink]="['home']" class="">Home</a>
 <a  [routerLink]="['about']" class="">About</a>
